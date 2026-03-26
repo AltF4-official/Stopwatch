@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Stopwatch</title>
-<link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/rd-d/ALs6j_GH7XO5JN0iGA2G0EzVAHT3cNjCcV8MXSLPMLGLyubp8bq1eqkSC-Oz7WK8WYOQd17KKVj1Jl4UxUz2JZQOgMbAqtQNlTXLDiDv-wvb9fSwSI8B_IjZ3D-56wdJ6zPmCnLn51PQ5Scix7EwuC_VlpLoy84nD8aN3SVqif6pU1QR04I4O1XFiFi6icS_YwkhSuXWA_FovDfxiTogIWGKQG0BFeqnMBiYs4bB2xTviZPxT9JtLXAnoIdM2fwyB29G88zMkawVCig-XMl-EtnkmqVkiVCCNojdrYecdx3SpCsfqxSw8YueDo1H7f7eSfpgxuUsbmKQpD7Rev_4GMzIScrZMi-u_Y5eZJaRh-ANNGlgxY-qXinxRMHB1WYTjzLijouCF4toQ0H9bFjs8Qy5kl44dFHMUi8A_CfAnxr60BIp3il6KgihvXPSmDLiJ53cnXGI7lzSX2XRDPrvq9ab7GeUQCWWD1Xh6q9BaoDjILzZHvvyczBqVOkeuscQePV0T8LmhO9HCCDkn83j3VJMexPOTtc3uq1IioP2U3tH5Ezesnqw1SEmBKgspNNQFvCmFj1bzynTob_Lm8BWfcXhT4A4rUJ7XHhoXOaBxeNeZDbqbrSMi-dG_T7NCY6TD98MxioWn-DFH1v1ZnbtyE1WNkFks6t2Z7AnA8BAX_eTptvRrJSlvds7RQfkU3rcMR9bcLWJrEyIrCDog5JqN7Cdw3SEo0NcVmOtmp08BLjhSqlyKXAsQgM_sar8xztbIeazxE3WkNZGWG5IUYXYqawCe89QQ2QOxE9LHALE7_6BxndK1kauNGzT3iTXt-dbMQyMJIpziKm9UYkxLZEqEHsk5b1Tu0th4dSwpOyUuG9s5OUSXNKvEj_dpSP4AL940L7VB2PRufp-maHdpQJxPedUuIEKYmLmnBziyK24ZvBbsKQd5g8TId4N8yZX8tm59IfR5Au-Qols30W3miQpZcZLjdThzzluFoToopar_-f7TG-4agbfpY0A6JXPaExjYip7N706j4JVDKaqO_qrHE40Ex-y0ceBZybhhVoBqrtmrlRZaao=w2940-h1602?auditContext=prefetch">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<style>
-html,body{
-    margin:0;
-    height:100%;
-    background:#0e0e11;
-}
-iframe{
-    width:100vw;
-    height:100vh;
-    border:0;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Workout Planner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="workout.css">
 </head>
 <body>
-<iframe
-    src="https://stopwatch-app.com/widget/stopwatch?theme=dark&color=orange"
-    allowfullscreen>
-</iframe>
+  <div id="week-modal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <div id="modal-inner"></div>
+    </div>
+  </div>
+  <div id="timer-bar" class="timer-bar hidden">
+    <div class="timer-inner">
+      <div class="timer-left">
+        <div class="timer-pulse"></div>
+        <span id="timer-day-label"></span>
+      </div>
+      <span id="timer-display">00:00</span>
+    </div>
+  </div>
+
+  <header>
+    <span class="wordmark">Workout</span>
+    <span id="today-label" class="today-label"></span>
+  </header>
+
+  <main id="days-container"></main>
+
+  <section id="week-summary" class="week-summary hidden"></section>
+
+  <script src="workout.js"></script>
 </body>
 </html>
